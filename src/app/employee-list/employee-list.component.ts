@@ -34,7 +34,7 @@ export class EmployeeListComponent implements OnInit{
         }
 
         //Update employee
-        updateEmployee(id: any) {
+        updateEmployee(id: number | undefined) {
           this.router.navigate(['update-employee', id]);
         }
 
@@ -44,6 +44,11 @@ export class EmployeeListComponent implements OnInit{
             console.log(data);
             this.lister();
           })
+        }
+
+        // Detail employee
+        detailEmployee(id: any) {
+          this.router.navigate(['detail-employee', id]);
         }
 
 }
