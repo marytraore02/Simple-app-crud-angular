@@ -11,14 +11,14 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) { }
 
-       // List 
-       liste(): Observable<any> {
+      // List 
+      liste(): Observable<any> {
         return this.http.get(`http://localhost:8080/api/v1/employees`);
       }
 
-               //Liste 
-   GetAllEployee(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(this.BASE_URL + `employees`);
-  }
+      //Liste 
+      GetAllEployee(): Observable<Employee[]> {
+        return this.http.get<Employee[]>(this.BASE_URL + `/employees`);
+      }
 
 }

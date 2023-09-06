@@ -20,7 +20,7 @@ export class EmployeeListComponent implements OnInit{
 
          // La liste des rendez-vous
          lister() {
-          this.employeeService.liste()
+          this.employeeService.GetAllEployee()
           .subscribe(
             res => {
               this.employees = res;
