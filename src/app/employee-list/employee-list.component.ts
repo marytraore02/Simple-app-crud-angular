@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Employee } from '../employee';
 import { EmployeeService } from '../services/employee.service';
 
@@ -8,11 +9,10 @@ import { EmployeeService } from '../services/employee.service';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit{
-  title = 'simple-crud-app-angular';
   employees!: Employee[];
   totalEmployees: any;
 
-  constructor(private employeeService: EmployeeService) {}
+  constructor(private employeeService: EmployeeService, private router: Router) {}
  
   ngOnInit(): void {
     this.lister();
@@ -31,6 +31,11 @@ export class EmployeeListComponent implements OnInit{
               // location.reload();
           }
           );
+        }
+
+        //Update employee
+        updateEmployee(id: number | undefined) {
+          this.router.navigate(['update-employee', id]);
         }
 
 }

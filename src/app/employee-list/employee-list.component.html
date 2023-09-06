@@ -1,4 +1,3 @@
-<h1 class="text-center">{{ title }}</h1>
 <h2> Number employee: {{ totalEmployees }} </h2>
 <table class="table table-striped">
     <thead>
@@ -8,6 +7,7 @@
             <th> Age </th>
             <th> Salaire </th>
             <th> Departement </th>
+            <th> Actions </th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +17,9 @@
             <td> {{ employee.age }} </td>
             <td> {{ employee.salaire }} </td>
             <td> {{ employee.deptName }} </td>
+            <td>
+                <button (click)="updateEmployee(employee.id)" routerLink="updateEmployee(employee.id)" class="btn btn-info">Update</button>
+            </td>
         </tr>
     </tbody>
 </table>

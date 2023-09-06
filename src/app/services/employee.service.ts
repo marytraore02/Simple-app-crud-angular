@@ -23,7 +23,12 @@ export class EmployeeService {
 
       //Create employee
       CreateEmployee(employee: Employee): Observable<Object>{
-        return this.http.post(`${this.BASE_URL}` + `/create`, employee);
+        return this.http.post(`${this.BASE_URL}` + `/employees/create`, employee);
+      }
+
+      //Update employee
+      getEmployeeById(id: number): Observable<Employee>{
+        return this.http.get<Employee>(`${this.BASE_URL}` + `/employees/${id}`);
       }
 
 }
