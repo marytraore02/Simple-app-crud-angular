@@ -29,8 +29,9 @@ export class UpdateEmloyeeComponent implements OnInit{
   UpdateEmployee() {
     this.employeService.updateEmployee(this.id, this.employees).subscribe(data => {
       console.log(data);
-      this.employees = new Employee();
-      this.
+      this.goToEmployeeList();
+      // this.employees = new Employee();
+      // this.
     })
   }
 
