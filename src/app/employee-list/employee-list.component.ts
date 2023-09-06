@@ -8,7 +8,7 @@ import { EmployeeService } from '../services/employee.service';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit{
-
+  title = 'simple-crud-app-angular';
   employees!: Employee[];
   totalEmployees: any;
 
