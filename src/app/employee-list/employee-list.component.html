@@ -18,7 +18,8 @@
             <td> {{ employee.salaire }} </td>
             <td> {{ employee.deptName }} </td>
             <td>
-                <button (click)="updateEmployee(employee.id)" routerLink="updateEmployee(employee.id)" class="btn btn-info">Update</button>
+                <button (click)="updateEmployee(employee.id)" class="btn btn-info">Update</button>
+                <button  class="btn btn-danger" (click)="deleteEmployee(employee.id)" style="margin-left: 10px">Delete</button>
             </td>
         </tr>
     </tbody>
